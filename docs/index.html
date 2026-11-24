@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>monaco-json-studio-base — Docs</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0a0e17; color: #f3f4f6; max-width: 820px; margin: 2.5rem auto; padding: 0 1.25rem; line-height: 1.65; }
+    a { color: #38bdf8; }
+    code, pre { background: #030712; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; }
+    pre { padding: 1rem; overflow-x: auto; }
+    code { padding: 2px 5px; }
+    .links { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0 2rem; }
+  </style>
+</head>
+<body>
+  <h1>monaco-json-studio-base</h1>
+  <p>The shared primitive engine and browser runtime powering <code>monaco-json-studio-single</code>, <code>double</code>, and <code>triple</code>.</p>
+  <div class="links">
+    <a href="https://www.npmjs.com/package/monaco-json-studio-base">npm Package</a>
+    <a href="https://github.com/keshavsoft/monaco-json-studio-base">GitHub Repo</a>
+    <a href="https://keshavsoft.github.io/monaco-json-studio-docs/base.html">Suite Story &amp; Architecture</a>
+  </div>
+  <h2>The Story</h2>
+  <p>Each pane is split into <code>header/</code>, <code>body/</code>, and <code>footer/</code> regions in <code>src/v1/</code> and <code>assets/v1/</code>. DOM events use <code>dom-primitive-bindings</code> (<code>bindings.json</code> + <code>actions.js</code>), while Monaco callbacks update cursor state.</p>
+  <h2>Example</h2>
+  <pre>import { generateStudio } from 'monaco-json-studio-base';
+
+generateStudio({
+  title: 'Custom Studio',
+  outputDir: './my-studio',
+  panes: [{ key: 'pane1', label: 'Pane 1', header: 'file-picker', body: 'monaco', footer: 'cursor' }]
+});</pre>
+</body>
+</html>

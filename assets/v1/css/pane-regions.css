@@ -1,0 +1,74 @@
+.pane-region { flex: 0 0 auto; }
+.pane-header {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 10px;
+    background: var(--bg-region);
+    border-bottom: 1px solid var(--border-color);
+    user-select: none;
+}
+.pane-header__left, .pane-header__right { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.pane-label {
+    overflow: hidden;
+    color: var(--accent-blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.pane-header--title { justify-content: flex-start; }
+.btn-pane-file {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: #20242f;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.btn-pane-file:hover { border-color: var(--accent-blue-border); background: #2a303f; }
+.btn-pane-file i { color: var(--accent-blue); }
+.pane-select {
+    max-width: 220px;
+    height: 26px;
+    padding: 2px 26px 2px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: #20242f;
+    color: var(--text-primary);
+    font: 11px var(--font-mono);
+}
+.pane-select:focus { outline: 1px solid var(--accent-blue); outline-offset: 1px; }
+.pane-file-input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.pane-file-pill {
+    max-width: 42vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: rgba(255, 255, 255, .04);
+}
+.pane-file-pill i { color: var(--accent-amber); }
+.pane-file-name { overflow: hidden; color: var(--text-primary); font: 11px var(--font-mono); text-overflow: ellipsis; }
+
+.pane-body--monaco { flex: 1 1 auto; }
+.pane-footer {
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-top: 1px solid var(--border-subtle);
+    background: var(--bg-footer);
+    color: var(--text-secondary);
+    font: 10px var(--font-mono);
+}
+.pane-footer--cursor { color: var(--accent-blue); }
+.pane-footer--note { color: var(--text-muted); }

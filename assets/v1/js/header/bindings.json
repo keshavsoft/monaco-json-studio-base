@@ -1,0 +1,17 @@
+[
+  {
+    "event": "click",
+    "selector": ".btn-pane-file",
+    "action": "openFilePicker"
+  },
+  {
+    "event": "change",
+    "selector": ".pane-file-input",
+    "action": "loadSelectedFile"
+  },
+  {
+    "event": "change",
+    "selector": ".pane-select",
+    "action": "selectPaneDataset"
+  }
+]
